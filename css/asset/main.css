@@ -1,0 +1,1382 @@
+@charset "utf-8";
+@import url(reset.css);
+
+/* ****************** 레이아웃 영역 선언 ****************** */
+
+#navi,
+#intro,
+#about,
+#strength,
+#map_canvas,
+#skill-banner,
+#process-banner,
+#footer {
+  height: auto;
+}
+
+#navi {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#about .content2>div:first-child li:first-child>div{
+  width:66%;
+}
+
+#wrap{
+  overflow: hidden;
+}
+
+#strength {
+  background-color: #f6f6f6;
+}
+
+#map_canvas {
+  height: 357px;
+}
+
+#skill-banner {
+  background: url(../../images/lg/skill-jarallax-img2.png) no-repeat 0 0;
+}
+
+#process-banner {
+  background: url(../../images/lg/process-jarallax-img.png) no-repeat 0 0;
+}
+
+#footer {
+  height: 84px;
+  background-color: #000;
+  color: #fff;
+}
+
+/* 위로 돌아가기 버튼 */
+.upBtn {
+  width: 63px;
+  height: 63px;
+  z-index: 10;
+  position: fixed;
+  right: 15px;
+  bottom: 21px;
+  font-size: 3.5rem;
+  color: #fff;
+  text-align: center;
+  line-height: 55px;
+  background-color: #000;
+  border: 2px solid #000;
+}
+
+.upBtn:hover {
+  background-color: #f5de58!important;
+  color:#000!important;
+}
+
+/* 모바일 사이드메뉴 버튼 */
+.closeBtn{
+  display:none;
+}
+
+
+
+/* ******************************  플러그인 초기값 리셋 **************************** */
+/* Bootstrap Reset*/
+.navbar-default {
+  height: 84px;
+  background-color: transparent;
+  border-color: rgb(160, 160, 160);
+  margin: 0;
+}
+
+/* Slick Slider Reset  */
+.slick-arrow {
+  display: none !important;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 21px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.slider .slick-dots li::after {
+  background-color: transparent !important;
+}
+
+.slick-dots>li>button {
+  width: 21px;
+  height: 21px;
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+  border-color: transparent;
+  margin-right: 10px;
+  font-size: 0;
+  opacity: 0.5;
+}
+
+.slick-dots .slick-active button {
+  opacity: 1;
+}
+
+/* Isotope Reset */
+.grid-item {
+  display: block;
+  width: 25%;
+}
+
+.grid-item>a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-item>a>img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* ******************************  공통영역 선언 **************************** */
+
+/* 영역별 메인타이틀 스타일 */
+#contact .contactTitle>h2,
+.mainTitle>div>h2 {
+  position: relative;
+  color: #000;
+  font: 700 4.5rem/45px 'Montserrat', sans-serif;
+  margin-bottom: 84px;
+}
+
+#contact .contactTitle>h2::after,
+.mainTitle>div>h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  top: 63px;
+  background-color: #f5de58;
+}
+
+#contact .mainTitle { display:none; }
+
+/* About 서브타이틀 스타일 */
+.sub-title h2 {
+  color: #000;
+  font: 700 2.1rem/21px 'Montserrat', sans-serif;
+  margin-bottom: 42px;
+}
+
+/* 네비게이션 스크롤 클래스 */
+.fixed {
+  background-color: #000 !important;
+}
+
+/* 스크롤스파이 active클래스 */
+#navi li.active a {
+  color: #f5de58 !important;
+}
+
+/* 700대부터 나타날 모바일 로고 */
+.mobileLogo{
+  display:none;
+}
+
+/* 700대부터 나타날 버튼 : Work With? */
+.workWith a:last-child{
+  display:none!important;
+}
+
+
+
+/* ******************************  개별영역 선언 **************************** */
+/* ******************  Navi Area Start ****************** */
+#navi .container {
+  height: 84px;
+}
+
+/* Site Logo */
+#navi h1 {
+  margin: 20px 40px 0 40px;
+}
+
+#navi #gnb {
+  float: left;
+}
+
+/* BTN : Work With? */
+#navi .workWith {
+  float: right;
+}
+
+#navi .workWith a {
+  display: inline-block;
+  color: #fff;
+  font: 500 1.2rem/84px 'Montserrat', sans-serif;
+}
+
+#navi .workWith a:first-child {
+  margin-right: 10px;
+}
+
+#navi .workWith a>span {
+  border: 1px solid #f5de58;
+  padding: 6px 20px;
+}
+
+#navi .workWith a:hover span {
+  color: #000;
+  background-color: #f5de58;
+}
+
+#navi li a {
+  color: #fff;
+  font: 500 1.5rem/84px 'Montserrat', sans-serif;
+  background-color: transparent;
+  display: block;
+  height: 84px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+
+/* ******************  Intro Area Start ****************** */
+#intro .container-fluid {
+  height: 100vh;
+}
+
+#intro .slider li {
+  position: relative;
+  overflow: hidden;
+}
+
+/* CoverBackground */
+#intro .slider li::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 37, 37, 0.7);
+}
+
+/* Slider Image */
+#intro .slider img {
+  width: 100%;
+  height: 100vh;
+  background-position: center top;
+  background-size: cover;
+
+  -webkit-transform: scale(1.8);
+  -moz-transform: scale(1.8);
+  -o-transform: scale(1.8);
+  transform: scale(1.8);
+
+  -webkit-transition: all 3s ease;
+  -moz-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  transition: all 3s ease;
+}
+
+/* Slider Image : Slick-Active */
+#intro .slider .slick-active img {
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+/* Slider TextBox */
+.slider .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#intro .text>span {
+  display: block;
+  font: 3rem/25px 'Montserrat', sans-serif;
+  margin-bottom: 21px;
+}
+
+#intro .text>h2 {
+  font: 700 6.5rem/70px 'Montserrat', sans-serif;
+  margin-bottom: 63px;
+  position: relative;
+}
+
+#intro .text>h2::after {
+  content: '';
+  width: 100px;
+  height: 10px;
+  position: absolute;
+  top: 95px;
+  left: 50%;
+  background-color: #f5de58;
+
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+#intro .text>p {
+  font-size: 1.6rem;
+  line-height: 21px;
+}
+
+#intro .text>p:last-child {
+  font-weight: 700;
+}
+
+#intro .text>p>em {
+  color: #f5a651;
+  font-style: normal;
+}
+
+#intro .text>p:nth-child(3) em {
+  font-weight: 700;
+}
+
+#intro .t2>p:last-child {
+  font-weight: 400;
+}
+
+#intro .t2>p:last-child>em {
+  font-weight: 700;
+}
+
+/* 슬라이더 전환시 텍스트 애니메이션 */
+#intro .text>span,
+#intro .text>h2,
+#intro .text>p {
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+  -o-transform: translateY(50px);
+  transform: translateY(50px);
+
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+/* Slider Text : Slick-Active */
+#intro .slick-active .text>span,
+#intro .slick-active .text>h2,
+#intro .slick-active .text>p {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+#intro .slick-active .text>span {
+  -webkit-transition-delay: .5s;
+  -moz-transition-delay: .5s;
+  -o-transition-delay: .5s;
+  transition-delay: .5s;
+}
+
+#intro .slick-active .text>h2 {
+  -webkit-transition-delay: 1.5s;
+  -moz-transition-delay: 1.5s;
+  -o-transition-delay: 1.5s;
+  transition-delay: 1.5s;
+}
+
+#intro .slick-active .text>p {
+  -webkit-transition-delay: 2s;
+  -moz-transition-delay: 2s;
+  -o-transition-delay: 2s;
+  transition-delay: 2s;
+}
+
+/* 슬라이드 첫장면 리셋 클래스 */
+.slider .reset .text>span,
+.slider .reset .text>h2,
+.slider .reset .text>p {
+  opacity: 1;
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+  -o-transform: translateY(50px);
+  transform: translateY(50px);
+}
+
+
+
+/* ******************  About Area Start ****************** */
+#about .container {
+  padding: 105px 0;
+}
+
+/* ********** Content1 : 자기소개 ********* */
+#about .content1 {
+  margin-bottom: 105px;
+}
+
+#about .content1>div:first-child>p:nth-child(2) {
+  font: 700 1.8rem/25px 'Spoqa Han Sans Neo', sans-serif;
+  margin-bottom: 21px;
+}
+
+#about .content1>div:first-child>p:nth-child(3),
+#about .content1>div:first-child>p:nth-child(4) {
+  font: 1.5rem/21px 'Spoqa Han Sans Neo', sans-serif;
+  color: #626262;
+}
+
+#about .content1>div:first-child>p:nth-child(4) {
+  margin-bottom: 63px;
+}
+
+/* 서명자리 */
+#about .content1>div:first-child>p:nth-child(5) {
+  float: left;
+}
+
+#about .content1>div:first-child>p:nth-child(5)>span:first-child {
+  display: block;
+  float: left;
+  font: 1.5rem/21px 'Spoqa Han Sans Neo', sans-serif;
+  margin-right: 25px;
+}
+
+/* 서명 이미지 */
+#about .content1>div:first-child>p:nth-child(5)>span:last-child {
+  display: block;
+  width: 70px;
+  height: 42px;
+  background: url(../../images/lg/about-sign.png) no-repeat 0 0;
+  float: left;
+}
+
+#about .content1>div:first-child>p:nth-child(5)>span>em {
+  color: #000;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* 이력서 다운로드 버튼 */
+#about .content1>div:first-child>p:last-child {
+  float: right;
+  width: 160px;
+  height: 35px;
+  border: 1px solid #000;
+}
+
+#about .content1>div:first-child>p:last-child>a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 700;
+  border: 1px solid #000;
+  background-color: #f5de58;
+}
+
+#about .content1>div:first-child>p:last-child>a>i {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-left: 5px;
+}
+
+#about .content1>div:first-child>p:last-child>a:hover {
+  background-color: #000;
+  color: #f5de58;
+}
+
+/* 자기소개 영역 이미지 */
+#about .content1>div:last-child>h2 {
+  float: right;
+  margin: 0;
+}
+
+#about .content1>div:last-child>h2::after {
+  background-color: transparent;
+}
+
+/* ********** Content2 : 이력영역 ********* */
+/* 이력정보 */
+#about .content2>div:first-child ul {
+  margin: 21px 0 0 20px;
+}
+
+#about .content2>div:first-child li {
+  margin-bottom: 39px;
+}
+
+#about .content2>div:first-child li:last-child {
+  margin-bottom: 0;
+}
+
+#about .content2>div:first-child li>h3 {
+  display: inline-block;
+  float: left;
+  color: #000;
+  font: 700 4rem/29px 'Spoqa Han Sans Neo', sans-serif;
+  margin: 0 7% 0 5%;
+}
+
+#about .content2>div:first-child li:first-child>div>p:nth-child(3)>br{
+  display:none;
+}
+
+#about .content2>div:first-child li>div {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+#about .content2>div:first-child li>div>em {
+  font-style: normal;
+  font-weight: 700;
+}
+
+#about .content2>div:first-child li:first-child>div>span {
+  display: block;
+  margin-bottom: 21px;
+  color: #333;
+  font: 700 1.8rem/21px 'Spoqa Han Sans Neo', sans-serif;
+}
+
+#about .content2>div:first-child li:first-child>div>p {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 21px;
+}
+
+#about .content2>div:first-child li:first-child>div>p:nth-child(2) {
+  font-weight: 700;
+  margin-bottom:10px;
+}
+
+#about .content2>div:first-child li:first-child>div>p:nth-child(3) {
+  color: #626262;
+}
+
+#about .content2>div:first-child li:nth-child(n+2)>div>p {
+  font: 700 1.8rem/21px 'Spoqa Han Sans Neo', sans-serif;
+  color: #333;
+  margin-bottom: 21px;
+}
+
+
+
+/* ******************  Strength Area Start ****************** */
+#strength .container {
+  padding: 42px 0;
+  overflow: hidden;
+}
+
+#strength .row>div {
+  cursor: pointer;
+}
+
+/* Box & Hover Caption */
+#strength .caption,
+#strength .box {
+  width: 270px;
+  height: 273px;
+  position: relative;
+  text-align: center;
+  color: #000;
+  background-color: #f5de58;
+}
+
+#strength .caption>div,
+#strength .box>div {
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* Box */
+#strength .box {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+#strength .box>div>i {
+  font-size: 5.2rem;
+  margin-bottom: 21px;
+}
+
+#strength .box>div>h3 {
+  font: 700 1.8rem/21px 'Montserrat', sans-serif;
+}
+
+#strength .box:hover {
+  opacity: 0;
+}
+
+/* Caption */
+#strength .caption {
+  border: 5px solid #f5de58;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: left;
+}
+
+#strength .caption>div>h3 {
+  position: relative;
+  margin-bottom: 63px;
+}
+
+#strength .caption>div>p {
+  font-size: 1.4rem;
+  color: #626262;
+}
+
+#strength .caption>div>h3::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  background-color: #000;
+  position: absolute;
+  top: 52px;
+  left: 0;
+}
+
+
+/* ******************  Certificate Area Start ****************** */
+#certificate .container {
+  padding-top: 105px;
+}
+
+#certificate .content {
+  height: 378px;
+}
+
+#certificate .box {
+  width: 288px;
+  height: 376px;
+  position: relative;
+}
+
+#certificate .box h3 {
+  width: 250px;
+  padding: 15px 30px;
+  text-align: center;
+  color: #000;
+  font: 700 1.6rem/21px 'Spoqa Han Sans Neo', sans-serif;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #f5de58;
+}
+
+/* Box */
+#certificate .box {
+  position: relative;
+}
+
+#certificate .box>img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hover Caption */
+#certificate .caption {
+  height: 189px;
+  width: 288px;
+  background-color: #f5de58;
+  position: relative;
+  z-index: 1;
+  padding: 42px;
+  text-align: center;
+}
+
+#certificate .caption h3 {
+  color: #000;
+  font: 700 1.6rem/21px 'Spoqa Han Sans Neo', sans-serif;
+  margin-bottom: 21px;
+}
+
+#certificate .caption p {
+  color: #000;
+  font: 700 1.3rem/21px 'Spoqa Han Sans Neo', sans-serif;
+}
+
+#certificate .caption p:nth-child(2) {
+  position: relative;
+  margin-bottom: 42px;
+}
+
+#certificate .caption p:nth-child(2)::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #000;
+}
+
+#certificate .c {
+  width: 288px;
+  height: 375px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#certificate .c>div,
+#certificate .c img {
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+#certificate .c>div {
+  z-index: 1;
+  position: relative;
+}
+
+#certificate .c img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  filter: brightness(0.5);
+}
+
+#certificate .c:hover img {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+#certificate .c:hover>div:first-child {
+  opacity: 0;
+  -webkit-transform: translateY(-375px);
+  -moz-transform: translateY(-375px);
+  -o-transform: translateY(-375px);
+  transform: translateY(-375px);
+}
+
+#certificate .c:hover>div.caption {
+  -webkit-transform: translateY(-187px);
+  -moz-transform: translateY(-187px);
+  -o-transform: translateY(-187px);
+  transform: translateY(-187px);
+}
+
+
+/* ******************  Skill Area Start ****************** */
+#skill .container {
+  padding: 105px 0;
+}
+
+#skill .content>div {
+  overflow: hidden;
+}
+
+#skill .content .c1 {
+  background-color: #000;
+}
+
+#works .mainTitle>div>h2,
+#process .mainTitle>div>h2,
+#skill .mainTitle>div>h2 {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+#works .mainTitle>div>p,
+#process .mainTitle>div>p,
+#skill .mainTitle>div>p {
+  display: inline-block;
+  width: 385px;
+  height: auto;
+  margin: 0;
+  position: relative;
+  top: 21px;
+  color: #626262;
+  font: 1.5rem/21px 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+/* Left-Box 이미지 영역 */
+#skill .content>div:first-child>img {
+  height: 567px;
+  width: 100%;
+}
+
+/* 이미지영역 테두리 */
+#skill .text {
+  width: 545px;
+  height: 530px;
+  padding: 30px;
+  color: #fff;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#skill .text::after {
+  content: '';
+  display: block;
+  width: 545px;
+  height: 530px;
+  border: 5px solid #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+#skill .text>p {
+  font: 700 3rem 'Spoqa Han Sans Neo', sans-serif;
+}
+
+#skill .text>p:first-child {
+  color: #f5de58;
+  margin-bottom: 35px;
+  margin-top: 42px;
+}
+
+/* Right-Box 그래프 영역 */
+#skill .content>div:last-child {
+  height: 567px;
+  background-color: #f6f6f6;
+  padding: 63px;
+}
+
+#skill .content>div:last-child>p {
+  color: #626262;
+  margin: 0;
+  font: 1.8rem/21px 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+#skill .content>div:last-child>p:first-child {
+  margin-bottom: 21px;
+}
+
+#skill .content>div:last-child>p:nth-child(2) {
+  margin-bottom: 42px;
+}
+
+#skill .content>div:last-child h3 {
+  color: #626262;
+  font: 500 1.5rem/21px 'Montserrat', sans-serif;
+}
+
+#skill .content>div:last-child span {
+  float: right;
+  color: #626262;
+  font: 500 1.5rem/21px 'Montserrat', sans-serif;
+}
+
+/* 그래프 */
+.progress {
+  background-color: #626262;
+  margin-bottom: 42px;
+  border-radius: 0;
+}
+
+.progress-bar {
+  background-color: #f5a651;
+  box-shadow: none;
+}
+
+
+
+/* ******************  Skill-Banner Area Start ****************** */
+#skill-banner .container-fluid {
+  height: 315px;
+  position: relative;
+}
+
+#skill-banner .text-box {
+  width: 360px;
+  height: auto;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#skill-banner .text-box>i {
+  font-size: 4rem;
+  color: #f5de58;
+  display: block;
+  margin-bottom: 21px;
+}
+
+#skill-banner .text-box>h3 {
+  font: 2.5rem/35px 'Spoqa Han Sans Neo', sans-serif;
+  margin-bottom: 21px;
+}
+
+#skill-banner .text-box>p {
+  color: #ccc;
+  font: 400 1.5rem/21px 'Montserrat', sans-serif;
+}
+
+
+
+/* ******************  Process Area Start ****************** */
+#process .container {
+  padding: 105px 0;
+}
+
+#process .mainTitle {
+  margin-bottom: 63px;
+}
+
+#process .content i,
+#process .content span {
+  display: block;
+  text-align: center;
+}
+
+#process .content a>div>div>i {
+  font-size: 3.5rem;
+  line-height: 84px;
+  color: #fff;
+}
+
+#process .content a>div {
+  position: relative;
+}
+
+#process .content a>div>i {
+  font-size: 4.5rem;
+  color: #e2e0e0;
+  position: absolute;
+  right: 0;
+  top: 30%;
+  -webkit-transform: translateY(-30%);
+  -moz-transform: translateY(-30%);
+  -o-transform: translateY(-30%);
+  transform: translateY(-30%);
+}
+
+#process .content span {
+  color: #999;
+  font: 700 1.8rem/21px 'Montserrat', sans-serif;
+}
+
+#process .content a>div>div {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background-color: #f5a651;
+  margin: auto auto 42px;
+  position: relative;
+}
+
+#process .content a>div>div::after {
+  content: '';
+  display: block;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid #f5a651;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  -moz-transform: translate(-50%, -50%) scale(0);
+  -o-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* actProcess -> ScrollMagic 사용 */
+.actProcess>div>div::after {
+  -webkit-transform: translate(-50%, -50%) scale(1)!important;
+  -moz-transform: translate(-50%, -50%) scale(1)!important;
+  -o-transform: translate(-50%, -50%) scale(1)!important;
+  transform: translate(-50%, -50%) scale(1)!important;
+}
+
+.actProcess span,
+.actProcess>div>div>i,
+.actProcess>div i {
+  color: #000 !important;
+}
+
+
+/* ******************  Process-Banner Area Start ****************** */
+#process-banner .container-fluid {
+  height: 315px;
+}
+
+#process-banner .text-box {
+  width: 360px;
+  height: auto;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#process-banner .text-box>i {
+  font-size: 4rem;
+  color: #f5de58;
+  display: block;
+  margin-bottom: 21px;
+}
+
+#process-banner .text-box>h3 {
+  margin-bottom: 21px;
+  font: 500 2.5rem/35px 'Montserrat', sans-serif;
+}
+
+
+
+/* ******************  Works Area Start ****************** */
+#works .container {
+  padding: 105px 0;
+}
+
+#works .container-fluid {
+  width:100%;
+  padding: 105px 0!important;
+}
+
+#works .grid ul {
+  height: 100%;
+}
+
+/* 갤러리 버튼 */
+#works .button-group {
+  margin-bottom: 63px;
+}
+
+#works button {
+  background-color: #fff;
+  padding: 0 10px;
+  margin-right: 10px;
+  border-color: transparent;
+  color: #000;
+  font: 700 1.5rem/21px 'Montserrat', sans-serif;
+}
+
+#works button:hover {
+  background-color: #f5de58;
+}
+
+/* 버튼 활성화 클래스 */
+.btnActive {
+  background-color: #f5de58 !important;
+}
+
+/* 갤러리 */
+#works .grid-item {
+overflow: hidden;
+}
+
+#works .grid-item>a {
+  position: relative;
+}
+
+#works .grid-item img {
+  display: block;
+  height: 100%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#works .grid-item>a::after {
+  opacity: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#works .grid-item:hover img {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/* 갤러리 캡션 */
+#works .caption {
+  opacity: 0;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 7px solid #f5de58;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#works .grid-item:hover a::after,
+#works .grid-item:hover .caption { opacity: 1; }
+
+#works .caption,
+#works .caption>div {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#works .caption>div {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#works .caption>div>a>h3 {
+  font: 700 2.5rem/25px 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+}
+
+/* 갤러리 버튼 스타일 클래스 */
+.button {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 21px;
+  padding: 5px 30px;
+  color: #fff !important;
+  background-color: #000;
+}
+
+.button:hover {
+  background-color: #f5de58 !important;
+  color: #000 !important;
+  border: 1px solid #000;
+}
+
+#works .caption>div>a>p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 21px;
+}
+
+#works .caption .tool {
+  font: 600 1.3rem/21px 'Montserrat', sans-serif;
+  margin-bottom: 5px;
+}
+
+#works .rwd .caption .tool {
+  font: 600 1rem/21px 'Montserrat', sans-serif;
+  margin-bottom: 5px;
+}
+
+/* 갤러리 팝업 영역 */
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 850px;
+  height: 550px;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+
+
+/* ******************  Contact Area Start ****************** */
+#contact .container {
+  padding: 105px 0;
+}
+
+#contact form {
+  margin-bottom: 30px;
+}
+
+#contact form>div {
+  width: 100%;
+}
+
+#contact form>div>textarea,
+#contact form>div>input {
+  width: 95%;
+  outline: none;
+  color: #000;
+  text-indent: 10px;
+  border-color: transparent;
+  padding: 5px;
+}
+
+#contact form>div>textarea:focus,
+#contact form>div>input:focus {
+  background-color: #f5de58;
+}
+
+#contact form>div>input {
+  margin-bottom: 10px;
+  display: block;
+  height: 30px;
+  border: 1px solid #ccc;
+}
+
+#contact form>div>textarea {
+  display: block;
+  height: 80px;
+  border: 1px solid #ccc;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+#contact .formBtn {
+  padding: 5px 25px;
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+}
+
+#contact .formBtn:hover {
+  background-color: #f5de58;
+}
+
+#contact .c2 {
+  height: 391px;
+  background-color: #f5de58;
+  padding: 42px;
+}
+
+#contact .box>p:first-child {
+  background-color: #fff;
+  width: 63px;
+  height: 63px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  color: #000;
+  font-size: 4rem;
+  text-align: center;
+  line-height: 60px;
+}
+
+#contact .box {
+  width: 33.33333333333333%;
+  float: left;
+}
+
+#contact .box p:first-child {
+  margin: auto;
+  margin-bottom: 21px;
+}
+
+#contact .box2>p {
+  line-height: 21px;
+}
+
+#contact .box2>p:first-child>i {
+  font-size: 3rem;
+}
+
+#contact span {
+  display: block;
+  text-align: center;
+}
+
+#contact .text {
+  margin-bottom: 63px;
+}
+
+#contact .box>p:last-child>span:first-child {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#contact .box2 p:first-child {
+  line-height: 45px;
+}
+
+#contact .text p {
+  font: 700 1.8rem/21px 'Spoqa Han Sans Neo', sans-serif;
+  text-align: center;
+}
+
+#contact .text p:last-child {
+  font-weight: 400;
+}
+
+
+/* ******************  Footer Area Start ****************** */
+#footer p {
+  font: 400 1.3rem/84px 'Montserrat', sans-serif;
+  text-align: center;
+  margin: 0;
+}
